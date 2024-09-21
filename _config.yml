@@ -28,8 +28,14 @@ url: "https://conmecha.me/" # the base hostname & protocol for your site, e.g. h
 github_username: conmecha
 github: conmecha
 
+author: conmecha
+
+permalink: /:year/:month/:day/:title/
+
+
 # Build settings
-remote_theme: pages-themes/hacker@v0.2.0
+theme: jekyll-theme-hacker
+# remote_theme: pages-themes/hacker@v0.2.0
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
