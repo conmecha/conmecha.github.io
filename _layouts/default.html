@@ -5,9 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     {% include head-custom.html %}
+    {% seo %}
 
-{% seo %}
+    <style>
+      /* Ensure the entire page is 100% height */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Main content area should take up all available space */
+      .container {
+        flex: 1;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #222;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .badges img {
+        margin: 5px;
+        height: 40px; /* Adjust size if needed */
+      }
+
+      .footer-content p {
+        margin: 0;
+        font-size: 16px;
+      }
+      </style>
   </head>
 
   <body>
@@ -30,5 +64,18 @@
         {{ content }}
       </section>
     </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="badges">
+            <!-- Example Badge (Replace with your own badges or GIFs) -->
+            <img src="/img/swbanner.png" alt="Slackware Banner">
+            <img src="/img/sw.gif" alt="Slackware GIF">
+            <!-- Add more badges or images here -->
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html> 
