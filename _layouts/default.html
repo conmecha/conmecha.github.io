@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "tr-TR" }}">
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,6 @@
     {% seo %}
 
     <style>
-      /* Ensure the entire page is 100% height */
       html, body {
         height: 100%;
         margin: 0;
@@ -19,28 +18,20 @@
         flex-direction: column;
       }
 
-      /* Main content area should take up all available space */
       .container {
         flex: 1;
       }
 
-      /* Footer styles */
       footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #222;
         color: #fff;
         padding: 20px 0;
         text-align: center;
       }
 
-      .badges img {
-        margin: 5px;
-        height: 40px; /* Adjust size if needed */
-      }
-
-      .footer-content p {
-        margin: 0;
-        font-size: 16px;
-      }
       </style>
   </head>
 
@@ -51,11 +42,6 @@
         <a id="a-title" href="{{ '/' | relative_url }}">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
-        <div>
-          <a href="https://github.com/conmecha/conmecha.github.io" target="_blank">
-            <h4>Source code</h3>
-          </a>
-        </div>
       </div>
     </header>
 
@@ -68,12 +54,9 @@
     <footer>
       <div class="container">
         <div class="footer-content">
-          <div class="badges">
-            <!-- Example Badge (Replace with your own badges or GIFs) -->
-            <img src="/img/swbanner.png" alt="Slackware Banner">
-            <img src="/img/sw.gif" alt="Slackware GIF">
-            <!-- Add more badges or images here -->
-          </div>
+            <a href="https://github.com/conmecha/conmecha.github.io" target="_blank">
+              Kaynak kodu
+            </a>
         </div>
       </div>
     </footer>
