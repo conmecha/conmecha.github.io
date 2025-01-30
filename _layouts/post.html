@@ -2,13 +2,25 @@
 layout: default
 ---
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
+{% assign month_number = page.date | date: "%m" %}
+{% case month_number %}
+  {% when '01' %} {% assign month_name = 'Ocak' %}
+  {% when '02' %} {% assign month_name = 'Şubat' %}
+  {% when '03' %} {% assign month_name = 'Mart' %}
+  {% when '04' %} {% assign month_name = 'Nisan' %}
+  {% when '05' %} {% assign month_name = 'Mayıs' %}
+  {% when '06' %} {% assign month_name = 'Haziran' %}
+  {% when '07' %} {% assign month_name = 'Temmuz' %}
+  {% when '08' %} {% assign month_name = 'Ağustos' %}
+  {% when '09' %} {% assign month_name = 'Eylül' %}
+  {% when '10' %} {% assign month_name = 'Ekim' %}
+  {% when '11' %} {% assign month_name = 'Kasım' %}
+  {% when '12' %} {% assign month_name = 'Aralık' %}
+{% endcase %}
+
+<small>{{ page.date | date: "%-d" }} {{ month_name }} {{ page.date | date: "%Y" }}</small>
+
+
 <h1>{{ page.title }}</h1>
 
-<p class="view">yazar: {{ page.author | default: site.author }}</p>
-
 {{content}}
-
-<!-- {% if page.categories %}
-  <small>tags: <em>{{ page.categories | join: "</em> - <em>" }}</em></small>
-{% endif %} -->
